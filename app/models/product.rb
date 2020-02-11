@@ -3,4 +3,5 @@ class Product < ApplicationRecord
   belongs_to :batch
 
   validates :category_id, :name, presence: true
+  mount_uploader :product_pic, ProductPicUploader
 end

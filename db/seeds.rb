@@ -4,17 +4,17 @@ Rake::Task['db:migrate'].invoke
 
 Category.create([
   {
-    tag_list: "vegetarian"
+    title: "Кулинария"
   },{
-    tag_list: "vegan"
+    title: "Выпечка"
   },{
-    tag_list: "asian"
+    title: "Фрукты и овощи"
   },{
-    tag_list: "fastfood"
+    title: "Мясо"
   },{
-    tag_list: "drinks"
+    title: "Напитки"
   },{
-    tag_list: "pastry"
+    title: "Сладкое"
   }
 ])
 
@@ -46,7 +46,7 @@ Product.create([
     category_id: 2,
     batch_id: 1
   },{
-    name: "Рыба",
+    name: "Мясо и Рыба",
     weight_type: "кг",
     quantity: 21,
     price: 50,

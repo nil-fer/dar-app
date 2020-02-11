@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
 
   # GET /products
   # GET /products.json
+
   def index
     @products = Product.all
   end
@@ -25,10 +26,11 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
+    @product.user_id = current_user.id
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
+        format.html { redirect_to @product, notice: 'Продукт добавлен.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
@@ -69,6 +71,14 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :weight_type, :quantity, :price, :sale_price, :company_name, :category_id, :batch_id)
+      params.require(:product).permit(:name, :weight_type, :quantity, :price, :sale_price, :company_name, :category_id, :batch_id, :product_pic)
     end
+    #
+    # u = User.new
+    # # u.pro = User.find(:id)
+    #
+    # u.save!
+    # u.avatar.url # => '/url/to/file.png'
+    # u.avatar.current_path # => 'path/to/file.png'
+    # u.avatar_identifier # => 'file.png'
 end

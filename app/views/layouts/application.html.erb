@@ -10,6 +10,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= link_to 'Каталог товаров', categories_path %>
+    <%= link_to 'Список заведений' %>
+    <%= link_to 'Специальные предложения'%>
+    <nav>
+      <%= link_to 'Продукты', products_path %>
+      <%= link_to 'Категории', categories_path %>
+      <%= link_to 'Партии', batches_path %>
+    </nav>
+
+  <%= yield %>
+
   </body>
 </html>

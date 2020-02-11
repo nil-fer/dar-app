@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Название:</strong>
   <%= @category.title %>
 </p>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<%= link_to 'Изменить', edit_category_path(@category) %> |
+<%= link_to 'Назад', new_category_path %>
 
 <%= render 'products/index' %>
