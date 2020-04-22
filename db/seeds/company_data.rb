@@ -35,3 +35,9 @@ def random_cover
   uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'lib/assets/company_covers', '*')).sample))
   uploader
 end
+
+def random_cover
+  uploader = CompanyCoverUploader.new(Company.new, :company_cover)
+  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'lib/assets/company_covers', '*')).sample))
+  uploader
+end
