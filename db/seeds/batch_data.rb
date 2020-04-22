@@ -1,3 +1,10 @@
+@user_emails = [
+  'manager@perekrestok.com',
+  'manager@karavaev_brothers.com',
+  'manager@mcdonalds.com',
+  'manager@french_bakery.com'
+]
+
 def create_batches
   create_batch(
     activation_start: 30.minutes.ago.change(usec: 0),
