@@ -1,6 +1,6 @@
 import React from 'react'
 // import $ from 'jquery'
-import ProductPopup from '../components/product_popup'
+import ProductPopup from './product_popup'
 
 export default class ProductExtendedPopup extends React.Component {
   constructor(props) {
