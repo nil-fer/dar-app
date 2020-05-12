@@ -1,3 +1,4 @@
+= javascript_pack_tag 'product_pack'
 = link_to 'Продукт', outlet_product_path(product.outlet, product), remote: true
 .product_card
   .cover
@@ -10,3 +11,5 @@
       p.dark_grey Цена за порцию / #{product.weight_amount} #{product.weight_type}
 
       .button_book.button Забронировать товар
+
+  .product_card_extended data-props=product.to_json
