@@ -1,0 +1,13 @@
+.title
+  .background
+  h1  Новая акция
+  hr.separator
+
+.products_container
+  = link_to new_outlet_product_path do
+    .new_product
+      .add
+      h3 Добавить продукт
+
+  - @products.each do |product|
+    = render partial: 'batch_product_card', locals: {product: product, discount: @batch.discount.to_i}

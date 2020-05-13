@@ -1,0 +1,85 @@
+
+@import 'mixins';
+
+@font-face {
+  font-family: 'CoFo Sans Medium';
+  src: font-url("CoFoSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'CoFo Sans Regular';
+  src: font-url("CoFoSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'CoFo Sans Bold';
+  src: font-url("CoFoSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'CoFo Sans Black';
+  src: font-url("CoFoSans-Black.ttf") format("truetype");
+}
+
+a,
+div,
+h2,
+h3,
+h4,
+p {
+  color: $black;
+  font-family: 'CoFo Sans Regular';
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 72px;
+  font-family: 'CoFo Sans Bold';
+}
+
+h2 {
+  font-size: 32px;
+  font-family: 'CoFo Sans Bold';
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 31px;
+  font-family: 'CoFo Sans Medium';
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 27px;
+  font-style: bold;
+  font-family: 'CoFo Sans Medium';
+}
+
+p {
+  font-size: 16px;
+  line-height: 16px;
+  font-family: 'CoFo Sans Regular';
+}
+
+p.location {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.orange {
+  color: $orange;
+}
+
+.grey {
+  color: $grey;
+}
+
+.dark_grey {
+  color: $dark_grey;
+}
+
+.add {
+  background-image: url("add.png");
+  width: 64px;
+  height: 64px;
+}

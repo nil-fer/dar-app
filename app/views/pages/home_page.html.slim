@@ -1,0 +1,57 @@
+.banner
+
+.menubar
+  hr.separator
+  .items
+    h4.menu_item Все
+    - Company.company_categories.each do |key, value|
+      h4.menu_item #{key}
+  hr.separator
+
+.batch
+  - if @current_batches.any?
+    .batch_block
+      .batch_block_title
+        h2 Активные акции
+        a.orange Показать все
+
+      .batch_block_cards
+        - @current_batches.each do |batch|
+          = render partial: 'outlets/outlet_card', locals: { outlet: batch.outlet, batch: batch }
+
+    hr.separator
+
+  - if @future_batches.any?
+    .batch_block
+      .batch_block_title
+        h2 Будущие акции
+        a.orange Показать все
+      .batch_block_cards
+        - @future_batches.each do |batch|
+          = render partial: 'outlets/outlet_card',locals: { outlet: batch.outlet, batch: batch }
+
+    hr.separator
+
+  - if @all_batches.any?
+    .companies
+      .batch_block_title
+        h2 Все заведения в вашем районе
+
+      .batch_block_cards
+        - @all_batches.each do |batch|
+          = render partial: 'outlets/outlet_card',locals: { outlet: batch.outlet, batch: batch }
+
+    - Outlet.outlet_categories.each do |category_name, index|
+      - category_batches = @all_batches.where(outlets: { outlet_category: index })
+      - next if category_batches.blank?
+
+      hr.separator
+      .batch_block
+        .batch_block_title
+          h2 = index
+
+        .batch_block_cards[id = "category_#{category_name}"]
+          - category_batches.each do |batch|
+            = render partial: 'outlets/outlet_card',locals: { outlet: batch.outlet, batch: batch }
+
+    .button_all.button показать еще

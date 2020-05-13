@@ -1,0 +1,6 @@
+- if can? :manage, Company
+  = render partial: 'outlet_list', collection: @outlets, as: :outlet
+
+= current_user.id
+= current_user.role
+= current_user.company.company_name

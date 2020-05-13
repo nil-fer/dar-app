@@ -1,0 +1,35 @@
+= javascript_pack_tag 'product_pack'
+.outlet_container
+  .outlet_banner
+  .outlet_info
+    h1  #{@outlet.company.company_name + ', ' + display_title_address(@outlet.address)}
+    - if @batch
+      h4
+        span
+        | акция до #{@batch.activation_end.strftime("%H:%M")}
+
+  p.location #{display_full_address(@outlet.address)}
+
+- if @products.present?
+  .menubar
+    hr.separator
+    .items
+      - Product.categories.each do |key, i|
+        h4.menu_item onclick="checkClick(this, '#{i}')" #{key}
+
+    hr.separator
+
+  - Product.categories.each do |category_name, index|
+    - products = @products.where(category: category_name)
+    - next if products.blank?
+    .batch
+      .batch_block
+        .batch_block_title
+          h2[id = "category_#{index}"] = category_name
+        .batch_block_cards
+          - @products.each do |product|
+            = render partial: 'products/product_card', locals: {product: product, discount: @batch.discount.to_i}
+
+    hr.separator
+
+  .banner

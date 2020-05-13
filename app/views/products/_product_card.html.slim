@@ -1,0 +1,16 @@
+= javascript_pack_tag 'product_pack'
+= link_to 'Продукт', outlet_product_path(product.outlet, product), remote: true
+.product_card
+  .cover
+    = image_tag(product.product_pic.to_s)
+  .product_card_info
+    .details
+      h4 #{product.name}
+      h3 #{product.price} &#8381;
+      h3 #{product.price-(product.price*discount/100)} &#8381;
+      p.dark_grey Цена за порцию / #{product.weight_amount} #{product.weight_type}
+
+      .button_book.button Забронировать товар
+
+  .product_card_extended data-props=product.to_json
+//    = react_component("product_extended_popup")
