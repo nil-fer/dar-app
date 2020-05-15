@@ -13,15 +13,22 @@
     = render partial: 'batch_product_card', locals: {product: product, batch: @batch}
 
 = form_with(model: @batch, url: [@outlet, @batch], local: true, html: {class: 'batch_form' }) do |form|
+
   .batch-panel
-    div
-      = form.label "Начало акции"
-      = form.time_field :activation_start, step: 60
-    div
-      = form.label "Конец акции"
-      = form.time_field :activation_end
-    div
+   .discount_start
+      div
+        = form.label "Начало акции"
+        = form.time_field :activation_start, step: 60
+
+   .discount_end
+      div
+        = form.label "Конец акции"
+        = form.time_field :activation_end
+
+   .discount_amount
       = form.label "Скидка на партию"
       = form.select :discount, Batch.discounts.keys
-  .actions
-    = form.submit
+
+   .button
+    .actions
+     = form.submit "Сохранить изменения", class: 'button_book button middle'

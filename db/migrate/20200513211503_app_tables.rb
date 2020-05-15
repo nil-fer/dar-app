@@ -15,7 +15,6 @@ class AppTables < ActiveRecord::Migration[6.0]
       t.integer :weight_type
       t.string :weight_amount
       t.string :product_pic
-      t.integer :user_id
       t.integer :category
       t.integer :outlet_id
 
@@ -26,7 +25,6 @@ class AppTables < ActiveRecord::Migration[6.0]
       t.datetime :activation_start
       t.datetime :activation_end
       t.integer :discount
-      t.integer :user_id
       t.integer :outlet_id
 
       t.timestamps
@@ -45,7 +43,6 @@ class AppTables < ActiveRecord::Migration[6.0]
       t.integer :company_id
       t.string :email
       t.string :company_category
-      t.integer :outlet_category
     end
   end
 end

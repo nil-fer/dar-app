@@ -1,3 +1,53 @@
 // Place all the styles related to the batches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$grey: #E5E5E5;
+
+.batch-panel {
+  position: fixed;
+  width: 100%;
+  height: 95px;
+  background-color: white;
+  box-shadow: 0px -1px 0px #E5E5E5;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}
+
+.discount_start, .discount_end, {
+  display: flex;
+  justify-content: space-between;
+
+  label {
+    font-size: 16px;
+    font-family: 'CoFo Sans Medium';
+  }
+
+  input[type=time] {
+    border: 1px solid $grey;
+    font-size: 16px;
+    font-family: 'CoFo Sans Medium';
+    width: 110px;
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin-left: 20px;
+  }
+}
+.discount_amount {
+  label {
+    font-size: 16px;
+    font-family: 'CoFo Sans Medium';
+  }
+
+  select {
+    margin-left: 15px;
+    font-size: 16px;
+    font-family: 'CoFo Sans Medium';
+    border: 1px solid $grey;
+    border-radius: 6px;
+    background-color: white;
+    padding: 10px 20px;
+  }
+}

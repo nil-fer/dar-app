@@ -11,9 +11,11 @@
     = form.select :category, Product.categories.keys,
       class: 'button_category button', placeholder: 'Выберитe категорию'
 
+    .radio_button
     = form.radio_button :weight_type, 'в порциях'
     = form.label :weight_type, "в порциях", value: 'в порциях'
 
+    .radio_button
     - checked = product.weight_type.nil?
     = form.radio_button :weight_type, 'на вес', checked: checked
     = form.label :weight_type, "на вес", value: 'на вес'

@@ -38,7 +38,7 @@
     margin: 48px auto 0;
 
     .bread_form {
-      margin: 128px auto;
+      margin: 98px auto;
     }
   }
 
@@ -53,10 +53,14 @@
     margin-left: 24px;
     margin-right: 24px;
     color: $dark_grey;
+    input {
+    font-family: 'CoFo Sans Medium';
+
+    }
   }
 
   hr.separator {
-    width: 584px;
+    width: 600px;
     position: relative;
     margin-top: 16px;
     margin-left: auto;
@@ -71,10 +75,21 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
+    select {
+      font-family: 'CoFo Sans Medium';
+      background-color: white;
+      border: 1px solid $grey;
+      width: 108px;
+      width: 150px;
+      height: 40px;
+    }
+
   }
 
   .measure_input {
     .input {
+      font-family: 'CoFo Sans Regular';
       margin-top: 8px;
       margin-right: 24px;
       border: 1px solid $grey;
@@ -96,7 +111,9 @@
     justify-content: space-between;
     margin-top: 32px;
   }
-}
+    }
+
+
 
 .file_field {
   position: absolute;
@@ -138,7 +155,7 @@
 
     .cover {
       flex: 1 0 auto;
-      background-color: $orange;
+      // background-color: $orange;
       @include card_img(130px, 184px)
     }
 
@@ -149,6 +166,7 @@
       background-color: $white;
       display: flex;
       flex-direction: row;
+      border-radius: 6px;
 
       .details {
         width: 368px;
@@ -162,6 +180,11 @@
         h4 {
           margin-top: 12px;
           width: 368px;
+          flex-direction: column;
+        }
+
+        .disabled_price {
+        display: none;
         }
 
         p {
@@ -225,6 +248,11 @@
       h4 {
         margin-top: 12px;
       }
+      
+      .disabled_price {
+      display: none;
+      }
+
 
       p {
         margin-top: 6px;

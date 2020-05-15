@@ -19,8 +19,6 @@ ActiveRecord::Schema.define(version: 2020_05_13_211503) do
     t.datetime "activation_start"
     t.datetime "activation_end"
     t.integer "discount"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.integer "outlet_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -49,6 +47,7 @@ ActiveRecord::Schema.define(version: 2020_05_13_211503) do
     t.json "address"
     t.integer "company_id"
     t.string "email"
+    t.string "company_category"
   end
 
   create_table "products", force: :cascade do |t|
