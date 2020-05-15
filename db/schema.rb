@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2020_05_13_211503) do
     t.string "company_name"
     t.string "logo"
     t.string "company_cover"
-    t.string "company_category"
+    t.integer "company_category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -49,17 +49,17 @@ ActiveRecord::Schema.define(version: 2020_05_13_211503) do
     t.integer "company_id"
     t.string "email"
     t.string "company_category"
-    t.string "outlet_category"
+    t.integer "outlet_category"
   end
 
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.integer "price"
-    t.string "weight_type"
+    t.integer "weight_type"
     t.string "weight_amount"
     t.string "product_pic"
     t.integer "user_id"
-    t.string "category"
+    t.integer "category"
     t.integer "outlet_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

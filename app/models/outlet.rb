@@ -6,10 +6,5 @@ class Outlet < ApplicationRecord
   has_many :products, dependent: :destroy
   has_many :batches
 
-  enum outlet_category: {
-    supermarket: 'Продуктовый магазин',
-    bakery: 'Пекарня',
-    cafe: 'Кофейня',
-    restaurant: 'Ресторан'
-  }
+  enum outlet_category: ['Продуктовый магазин', 'Пекарня', 'Кофейня', 'Ресторан']
 end

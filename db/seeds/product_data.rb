@@ -8,7 +8,7 @@ FOOD_NAME = {
 
 def create_products
   6.times do
-    Product.categories.each_value do |value|
+    Product.categories.each_key do |value|
       create_product('manager@perekrestok.com', value)
       create_product('manager@karavaev_brothers.com', value)
       create_product('manager@mcdonalds.com', value)
@@ -22,7 +22,7 @@ def create_product(user_email, category)
 
   Product.create(
     name: FOOD_NAME[category].sample,
-    weight_type: 'в порциях',
+    weight_type: 1,
     weight_amount: random_weight_amount,
     price: random_price,
     category: category,

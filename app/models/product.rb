@@ -9,16 +9,7 @@ class Product < ApplicationRecord
   # mount_uploader :product_pic, ProductPicUploader
 
   # data enumerizers
-  enum weight_type: {
-    kilos: 'на вес',
-    portions: 'в порциях'
-  }
+  enum weight_type: ['на вес', 'в порциях']
 
-  enum category: {
-    homemade: 'Кулинария',
-    grocery: 'Бакалея',
-    vegetarian: 'Вегетарианское',
-    drinks: 'Напитки',
-    sweets: 'Сладкое'
-  }
+  enum category: ['Кулинария', 'Бакалея', 'Вегетарианское', 'Напитки', 'Сладкое']
 end
