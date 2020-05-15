@@ -41,8 +41,8 @@
         - @all_batches.each do |batch|
           = render partial: 'outlets/outlet_card',locals: { outlet: batch.outlet, batch: batch }
 
-    - Outlet.outlet_categories.each do |category_name, index|
-      - category_batches = @all_batches.where(outlets: { outlet_category: index })
+    - Company.company_categories.each do |category_name, index|
+      - category_batches = @all_batches.where(companies: { company_category: index })
       - next if category_batches.blank?
 
       hr.separator

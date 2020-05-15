@@ -1,5 +1,11 @@
 - @companies.each do |company|
-  = company.company_name
+  div
+    h4 = link_to company.company_name, company_path(company)
+    br
+    = link_to 'Редактировать', edit_company_path(company)
+    br
+    = link_to 'Удалить', company, method: :delete, data: { confirm: 'Are you sure?' }
+
 
 
 = link_to 'Создать компанию',  new_company_path

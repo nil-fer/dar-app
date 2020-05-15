@@ -8,17 +8,17 @@ FOOD_NAME = {
 
 def create_products
   6.times do
-    Product.categories.each_key do |value|
-      create_product('manager@perekrestok.com', value)
-      create_product('manager@karavaev_brothers.com', value)
-      create_product('manager@mcdonalds.com', value)
-      create_product('manager@french_bakery.com', value)
+    Product.categories.each_key do |key|
+      create_product('Перекресток', key)
+      create_product('Братья Караваевы', key)
+      create_product('МакДоналдс', key)
+      create_product('Французская пекарня', key)
     end
   end
 end
 
-def create_product(user_email, category)
-  user = User.find_by_email(user_email)
+def create_product(company_name, category)
+  company = Company.find_by(company_name: company_name)
 
   Product.create(
     name: FOOD_NAME[category].sample,
@@ -27,8 +27,7 @@ def create_product(user_email, category)
     price: random_price,
     category: category,
     product_pic: upload_fake_product_pic(category: category),
-    outlet_id: user.outlet_id,
-    user_id: user.id
+    outlet_id: company.outlet_ids.first
   )
 end
 

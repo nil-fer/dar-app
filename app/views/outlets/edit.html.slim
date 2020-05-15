@@ -1,0 +1,4 @@
+h1
+  | Редактировать
+= render 'form', outlet: @outlet, company: @outlet.company
+= link_to 'Back', company_path(@outlet.company)

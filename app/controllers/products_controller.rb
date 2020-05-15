@@ -1,23 +1,13 @@
 # frozen_string_literal: true
 
 class ProductsController < ApplicationController
-
-  # TO DO указать экшны в которых должен вызываться :get_outlet
   before_action :get_outlet
-  before_action :set_product, only: %i[show edit update destroy]
+  before_action :set_product, only: %i[edit update destroy]
 
   def index
-    @batch = @outlet.batches.where(
-      'DATE(activation_start) = ? AND activation_end > ?' , Date.current.to_s, Time.current
-    ).first
+    @batch = @outlet.batches.where('DATE(activation_start) = ?' , Date.current.to_s).first
+    @batch ||= @outlet.batches.build
     @products = @outlet.products
-  end
-
-  def show
-    respond_to do |format|
-      format.html
-      format.js
-    end
   end
 
   def new
@@ -28,7 +18,6 @@ class ProductsController < ApplicationController
 
   def create
     @product = @outlet.products.build(product_params)
-    # @product.user_id = current_user.id
 
     respond_to do |format|
       if @product.save
@@ -78,9 +67,7 @@ class ProductsController < ApplicationController
       :weight_type,
       :weight_amount,
       :product_pic,
-      :category,
-      :company_name,
-      :outlet_id
+      :category
     )
   end
 end

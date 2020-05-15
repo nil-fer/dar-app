@@ -1,4 +1,6 @@
-= form_with(model: outlet, local: true) do |form|
+- url = outlet.persisted? ? outlet_path(outlet) : outlets_path(company_id: @company.id)
+
+= form_with(model: outlet, url: url, local: true) do |form|
   - if outlet.errors.any?
     #error_explanation
       h2
@@ -9,16 +11,22 @@
           li
             = message
   .field
-    = form.label :name
-    = form.text_field :name
-  .field
-    = form.label :outlet_category
-    = form.text_field :outlet_category
-  .field
-    = form.label :company_id
-    = form.text_field :company_id
-  .field
-    = form.label :user_id
-    = form.text_field :user_id
+    = form.label :email
+    = form.text_field :email
+
+  = form.fields_for :address, OpenStruct.new(form.object.address) do |address_form|
+    .field
+      = address_form.label :city
+      = address_form.text_field :city
+    .field
+      = address_form.label :street
+      = address_form.text_field :street
+    .field
+      = address_form.label :apartment
+      = address_form.text_field :apartment
+    .field
+      = address_form.label :block
+      = address_form.text_field :block
+
   .actions
     = form.submit

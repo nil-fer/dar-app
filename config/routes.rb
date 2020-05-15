@@ -2,20 +2,21 @@
 
 Rails.application.routes.draw do
   root 'pages#home_page'
-
   get 'pages/home_page'
-  get 'users/outlet_list'
-  devise_for :users
-  resource :batches, only: %i[update create]
-  resources :companies
-  devise_for :outlets, path: 'auth', path_names: { sign_in: 'sign_in', sign_out: 'sign_out' }
-  # devise_scope :outlet do
-  #   get 'sign_in', to: 'devise/sessions#new'
-  #   get 'sign_out', to: 'devise/sessions#destroy'
-  # end
 
-  resources :outlets do
-    resources :products
+  devise_for :users, skip: [:registrations]
+  as :user do
+    get 'users/cancel' => 'devise/registrations#cancel', as: 'cancel_user_registration'
+    get 'users/edit' => 'devise/registrations#edit', as: 'edit_user_registration'
+    put 'users' => 'devise/registrations#update', as: 'user_registration'
+    delete 'users' => 'devise/registrations#destroy', as: 'delete_user_registration'
   end
 
+  resources :companies
+  resources :users, only: :index
+
+  resources :outlets, except: :index do
+    resources :products, except: :show
+    resources :batches, only: %i[create update]
+  end
 end

@@ -4,7 +4,5 @@ class Outlet < ApplicationRecord
   has_one :user
   belongs_to :company
   has_many :products, dependent: :destroy
-  has_many :batches
-
-  enum outlet_category: ['Продуктовый магазин', 'Пекарня', 'Кофейня', 'Ресторан']
+  has_many :batches, dependent: :destroy
 end

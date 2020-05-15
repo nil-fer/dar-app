@@ -1,6 +1,11 @@
+h3 = @company.company_name
+h4 = @company.company_category
+
 - if can? :manage, Company
+  | Атулеты
   = render partial: 'outlet_list', collection: @outlets, as: :outlet
 
-= current_user.id
-= current_user.role
-= current_user.company.company_name
+= link_to "Редактировать компанию", edit_company_path(@company)
+= link_to "Создать новый аутлет", new_outlet_path(company_id: @company.id)
+
+= link_to 'Back', companies_path

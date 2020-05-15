@@ -12,12 +12,12 @@ class Ability
       can :manage, :all
 
     elsif user.role == 'retailer'
-      can :manage, [Outlet, Company, User], :user_id => user.id
-      #can :manage, Outlet
+      can :manage, Company, :id => user.company_id
+      can :manage, Outlet, :company_id => user.company_id
 
     elsif user.role == 'manager'
-      can :manage, [Batch, Product, User], :user_id => user.id
-      can [:read, :update], Outlet, :user_id => user.id
+      can :manage, [Batch, Product], :outlet_id => user.outlet_id
+      can [:read, :update], Outlet, :id => user.oulet_id
 
     else
       can :read, [Outlet, Batch, Product]

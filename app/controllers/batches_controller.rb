@@ -1,34 +1,33 @@
 # frozen_string_literal: true
 
 class BatchesController < ApplicationController
-   
+  before_action :get_outlet
 
   def create
-    @batch = current_user.batches.build(batch_params)
-    @products = current_user.products
+    @batch = @outlet.batches.build(batch_params)
+    @products = @outlet.products
 
     respond_to do |format|
       if @batch.save
-        format.html { redirect_to users_profile_path, notice: 'Updated' }
+        format.html { redirect_to outlet_products_path(@outlet), notice: 'Updated' }
         format.json { render :show, status: :created, location: @batch }
       else
-        format.html { render 'users/profile' }
+        format.html { render 'products/index' }
         format.json { render json: @batch.errors, status: :unprocessable_entity }
       end
     end
   end
 
-# TODO разобраться что делает этот метод и правильно ли он работает
   def update
-    @batch = Batch.where('user_id = ? and DATE(activation_start) =?', current_user.id, Date.current.to_s).first
-    @products = current_user.products
+    @batch = @outlet.batches.find(params[:id])
+    @products = @outlet.products
 
     respond_to do |format|
       if @batch.update(batch_params)
-        format.html { redirect_to users_profile_path, notice: 'Batch was successfully updated.' }
+        format.html { redirect_to outlet_products_path(@outlet), notice: 'Batch was successfully updated.' }
         format.json { render :show, status: :ok, location: @batch }
       else
-        format.html { render 'users/profile' }
+        format.html { render 'products/index' }
         format.json { render json: @batch.errors, status: :unprocessable_entity }
       end
     end
@@ -37,6 +36,15 @@ class BatchesController < ApplicationController
   private
 
   def batch_params
-    params.require(:batch).permit(:discount, :activation_start, :activation_end, batches_products_attributes: %i[product_id quantity id])
+    params.require(:batch).permit(
+      :discount,
+      :activation_start,
+      :activation_end,
+      batches_products_attributes: %i[product_id quantity id]
+    )
+  end
+
+  def get_outlet
+    @outlet = Outlet.find(params[:outlet_id])
   end
 end
