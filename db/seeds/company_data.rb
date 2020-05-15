@@ -21,7 +21,7 @@ def create_company(company_name:, retailer_email:)
   company = Company.create(
     company_name: company_name,
     company_cover: random_cover,
-    company_category: Company.company_categories.keys.sample
+    company_category: Company.company_categories.values.sample
   )
   company.save!
 

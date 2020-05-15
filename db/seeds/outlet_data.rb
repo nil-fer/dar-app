@@ -46,6 +46,7 @@ def create_outlet(company_name:, address:, manager_email:)
     address: address,
     outlet_category: company.company_category
   )
+
   outlet.save!
 
   User.find_by_email(manager_email).update(

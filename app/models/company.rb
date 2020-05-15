@@ -12,5 +12,4 @@ class Company < ApplicationRecord
     cafe: 'Кофейня',
     restaurant: 'Ресторан'
   }
-
 end
