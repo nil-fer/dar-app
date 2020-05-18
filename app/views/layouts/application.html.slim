@@ -18,14 +18,14 @@ html
         /.location Some location
 
       - if user_signed_in?
-        div
+        .user_login
           #= link_to current_user.email, navbar_path(current_user)
-        - if current_user.role == 'admin'
-            div
-            = link_to "Компании", companies_path
-            = link_to "Пользователи", users_path
-        .logout
-          = link_to 'Выход', destroy_user_session_path, method: :delete
+          - if current_user.role == 'admin'
+              = link_to "Компании", companies_path
+              = link_to "Пользователи", users_path
+              = link_to "Отправить приглашение", new_user_invitation_path
+          .logout
+            = link_to 'Выход', destroy_user_session_path, method: :delete
 
       - else
         .login

@@ -1,6 +1,6 @@
 import React from "react"
 import ReactDOM from 'react-dom'
-export default class Whatever extends React.Component {
+export default class Quantity extends React.Component {
   constructor(props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
@@ -12,11 +12,12 @@ export default class Whatever extends React.Component {
   render() {
     return (
       <div> попа
-      <div/>
-     )
+      </div>
+    );
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(<Whatever/>, document.getElementById('react_quantity'))
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('hello')
+  ReactDOM.render(<Quantity/>, document.getElementById('react_quantity'))
 })

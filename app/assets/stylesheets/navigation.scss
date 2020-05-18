@@ -15,15 +15,26 @@ nav.navbar {
     flex-direction: row;
     align-items: center;
 
+
     .logo {
       background-image: url("logo.png");
       background-size: contain;
+      margin-left: 60px;
       width: 44px;
       height: 32px;
     }
 
     .location {
       margin-left: 24px;
+    }
+  }
+
+  .user_login {
+    display: flex;
+    flex-direction: row;
+    margin-right: 40px;
+    > * {
+      margin-right: 16px;
     }
   }
 
