@@ -13,6 +13,7 @@ gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 gem 'devise'
 gem 'cancancan'
+gem 'devise_invitable'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 gem 'ffaker'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker

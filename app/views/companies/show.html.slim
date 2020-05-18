@@ -1,11 +1,21 @@
-h3 = @company.company_name
-h4 = @company.company_category
-
+.outlet_container
+  .outlet_banner
+  .outlet_info
+  h1 = @company.company_name
+  h3 = @company.company_category
 - if can? :manage, Company
-  | Атулеты
-  = render partial: 'outlet_list', collection: @outlets, as: :outlet
+  .outlet_title
+    h3 Все аутлеты
+    = link_to "Создать новый аутлет", new_outlet_path(company_id: @company.id)
+.outlet_list
+  - if can? :manage, Outlet
+    .outlet_line
+      p Номер
+      p Адрес
+      p Почта менеджера
+    = render partial: 'outlet_list', collection: @outlets, as: :outlet
 
-= link_to "Редактировать компанию", edit_company_path(@company)
-= link_to "Создать новый аутлет", new_outlet_path(company_id: @company.id)
-
-= link_to 'Back', companies_path
+  - if can? :manage, :all
+    br
+      = link_to "Редактировать компанию", edit_company_path(@company)
+      = link_to 'Back', companies_path

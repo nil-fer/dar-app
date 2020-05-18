@@ -7,6 +7,7 @@ html
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_pack_tag 'application'
+    = javascript_pack_tag 'quantity'
 
     link href="//db.onlinewebfonts.com/c/264e8767769e1b5b33e24efbecade995?family=CoFo+Sans" rel="stylesheet" type="text/css" /
   body
@@ -17,10 +18,12 @@ html
         /.location Some location
 
       - if user_signed_in?
-        #= link_to current_user.email, navbar_path(current_user)
+        div
+          #= link_to current_user.email, navbar_path(current_user)
         - if current_user.role == 'admin'
-          = link_to "Компании", companies_path
-          = link_to "Пользователи", users_path
+            div
+            = link_to "Компании", companies_path
+            = link_to "Пользователи", users_path
         .logout
           = link_to 'Выход', destroy_user_session_path, method: :delete
 

@@ -1,8 +1,6 @@
-div
-  = outlet.id
-  | ---
-  = display_full_address(outlet.address)
-  br
-  = link_to 'Редактировать', edit_outlet_path(outlet, company_id: outlet.company_id)
-  br
-  = link_to 'Удалить', outlet, method: :delete, data: { confirm: 'Are you sure?' }
+  .outlet_line
+    p = outlet.id
+    p = display_full_address(outlet.address)
+    p = outlet.email
+    = link_to 'Редактировать', edit_outlet_path(outlet, company_id: outlet.company_id)
+    = link_to 'Удалить', outlet, method: :delete, data: { confirm: 'Are you sure?' }
