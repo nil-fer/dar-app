@@ -25,28 +25,8 @@ export default class Quantity extends React.Component {
         quantity: prevState.quantity - 1
       }))
     }
-    {/*updateQuantityOnBackend(this.state.quantity)*/}
   }
 
-  {/*
-    по какой ссылке нам отправлять запрос обновления quantity?
-    updateQuantityOnBackend(quantity) {
-    const batchesProductId = this.props.batchesProductId
-    const url = ?
-    fetch(url, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({quantity: quantity})
-    })
-    .then(res => {
-      return res.json()
-    })
-    .then(data => console.log(data))
-    .catch((error) => {
-      console.error('Error:', error)
-    })
-  }
-  */}
 
   render() {
     return (
