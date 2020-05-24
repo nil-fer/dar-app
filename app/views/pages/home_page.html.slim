@@ -48,9 +48,9 @@
       hr.separator
       .batch_block
         .batch_block_title
-          h2 = index
+          h2 = category_name
 
-        .batch_block_cards[id = "category_#{category_name}"]
+        .batch_block_cards[id = "category_#{index}"]
           - category_batches.each do |batch|
             = render partial: 'outlets/outlet_card',locals: { outlet: batch.outlet, batch: batch }
 

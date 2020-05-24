@@ -1,42 +1,40 @@
-import React from 'react'
-// import $ from 'jquery'
-import ProductPopup from './product_popup'
+import React from 'react';
+import ProductPopup from './product_popup';
 
 export default class ProductExtendedPopup extends React.Component {
   constructor(props) {
-  super(props)
-  this.showModal = this.showModal.bind(this)
-  this.hideModal = this.hideModal.bind(this)
-  // this.userList = this.userList.bind(this)
+    super(props);
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
+    // this.userList = this.userList.bind(this)
 
-  this.state = {
-   flat: {
-    product: this.props.product,
-    productShow: false
-   }
+    this.state = {
+      flat: {
+        product: this.props.product,
+        productShow: false,
+      },
+    };
   }
- }
 
- showModal = () => {
-  this.setState({productShow: true});
- };
+  showModal = () => {
+    this.setState({ productShow: true });
+  };
 
- hideModal = () => {
-  this.setState({productShow: false});
- };
+  hideModal = () => {
+    this.setState({ productShow: false });
+  };
 
- render() {
+  render() {
+    return (
+      <div className="product">
+        <button type="button" onClick={this.showModal}>
+          open
+        </button>
 
-
-  return (<div className="product">
-    <button type="button" onClick={this.showModal}>
-      open
-    </button>
-
-    <ProductPopup productShow={this.state.productShow} handleClose={this.hideModal}>
-     <h1> aa смог</h1>
-    </ProductPopup>
-
-  </div>)
- }
+        <ProductPopup productShow={this.state.productShow} handleClose={this.hideModal}>
+          <h1> aa смог</h1>
+        </ProductPopup>
+      </div>
+    );
+  }
 }
