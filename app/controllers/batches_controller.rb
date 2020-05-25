@@ -18,7 +18,6 @@ class BatchesController < ApplicationController
     end
   end
 
-# TODO разобраться что делает этот метод и правильно ли он работает
   def update
     @batch = @outlet.batches.find(params[:id])
     @products = @outlet.products

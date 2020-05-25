@@ -17,7 +17,7 @@
         .button_quantity.button
           span.decrease_quantity -
           - current_batch_product = batch.batches_products.find_by(product_id: product.id)
-          // span.quantity_value.react_quantity data-url=url_for(current_batch_product) data-batch_product_quantity=current_batch_product&.quantity data-product_id=product.id data-batch_product_id=(current_batch_product&.id || '')
+          span.quantity_value.react_quantity data-url=url_for(current_batch_product) data-batch_product_quantity=current_batch_product&.quantity data-product_id=product.id data-batch_product_id=(current_batch_product&.id || '')
             = current_batch_product&.quantity || 0
           span.increase_quantity +
       .buttons

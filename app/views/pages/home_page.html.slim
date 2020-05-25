@@ -51,7 +51,7 @@
           h2 = category_name
 
         .batch_block_cards[id = "category_#{index}"]
-          - category_batches.each do |batch|
-            = render partial: 'outlets/outlet_card',locals: { outlet: batch.outlet, batch: batch }
+         - category_batches.each do |batch|
+           = render partial: 'outlets/outlet_card',locals: { outlet: batch.outlet, batch: batch }
 
-    .button_all.button показать еще
+    //.button_all.button показать еще

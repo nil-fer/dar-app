@@ -2,20 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
-import ProductExtendedPopup from '../components/product_extended_popup';
+import Products from '../components/products';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const productPopup = document.getElementsByClassName('product_card_extended');
-
-  if (productPopup) {
-    return;
-  }
-  const productPopupInfo = JSON.parse(productPopup[0].dataset.props);
+  const productsInfo = JSON.parse(document.getElementsByClassName('batch_block_cards')[0].dataset.props)
 
   ReactDOM.render(
-    <ProductExtendedPopup {...productPopupInfo} />,
+    <Products {...productsInfo} />,
     document
-      .getElementsByClassName('product_card_extended')[0]
+      .getElementsByClassName('batch_block_cards')[0]
       .appendChild(document.createElement('section')),
   );
 });

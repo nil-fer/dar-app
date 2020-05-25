@@ -4,15 +4,10 @@ class OutletsController < ApplicationController
   before_action :set_company, only: %i[new create]
 
   def show
-<<<<<<< HEAD
     @batch = @outlet.batches.where(
       'DATE(activation_start) = ? AND activation_end > ?' , Date.current.to_s, Time.current
     ).first
     @products = @batch&.products
-=======
-    @batch = @outlet.batch
-    @products = @batch.products
->>>>>>> f0c0273... fixes
   end
 
   def new
