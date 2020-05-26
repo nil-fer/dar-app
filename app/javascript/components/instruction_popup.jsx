@@ -6,7 +6,6 @@ const InstructionPopup = ({ handleClose, instructionShow }) => {
   return (
     <div className={showHideClassName}>
       <div className="modal instruction-modal">
-        <div>some instructions goes here</div>
         <div className="close-btn" onClick={handleClose}>
           &times;
         </div>

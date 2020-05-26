@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(128, 128, 128, 0.5);
+  background-color: rgba(51, 51, 51, 0.5);
   z-index: 5000;
 }
 
@@ -32,15 +32,18 @@
 }
 
 .instruction-modal {
+
   top: 20%;
-  left: 20%;
-  width: 70%;
-  height: 70%;
+  left: 28%;
+  width: 630px;
+  height: 460px;
+  background-image: url(instruction.png);
+  background-repeat: no-repeat;
 }
 
 .close-btn {
   float: right;
-  color: green;
+  color: black;
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
