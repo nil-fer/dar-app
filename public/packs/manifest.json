@@ -12,18 +12,18 @@
     },
     "product_pack": {
       "js": [
-        "/packs/js/product_pack-de5bd20df3b3b071c3a8.js"
+        "/packs/js/product_pack-e52a4ac4538a1af4077a.js"
       ],
       "js.map": [
-        "/packs/js/product_pack-de5bd20df3b3b071c3a8.js.map"
+        "/packs/js/product_pack-e52a4ac4538a1af4077a.js.map"
       ]
     },
     "quantity": {
       "js": [
-        "/packs/js/quantity-2b3b97c127b1e54ccbdc.js"
+        "/packs/js/quantity-38e06ea6097997dbbe63.js"
       ],
       "js.map": [
-        "/packs/js/quantity-2b3b97c127b1e54ccbdc.js.map"
+        "/packs/js/quantity-38e06ea6097997dbbe63.js.map"
       ]
     },
     "server_rendering": {
@@ -35,10 +35,10 @@
       ]
     }
   },
-  "product_pack.js": "/packs/js/product_pack-de5bd20df3b3b071c3a8.js",
-  "product_pack.js.map": "/packs/js/product_pack-de5bd20df3b3b071c3a8.js.map",
-  "quantity.js": "/packs/js/quantity-2b3b97c127b1e54ccbdc.js",
-  "quantity.js.map": "/packs/js/quantity-2b3b97c127b1e54ccbdc.js.map",
+  "product_pack.js": "/packs/js/product_pack-e52a4ac4538a1af4077a.js",
+  "product_pack.js.map": "/packs/js/product_pack-e52a4ac4538a1af4077a.js.map",
+  "quantity.js": "/packs/js/quantity-38e06ea6097997dbbe63.js",
+  "quantity.js.map": "/packs/js/quantity-38e06ea6097997dbbe63.js.map",
   "server_rendering.js": "/packs/js/server_rendering-0eb09cdf7f1c42854581.js",
   "server_rendering.js.map": "/packs/js/server_rendering-0eb09cdf7f1c42854581.js.map"
 }

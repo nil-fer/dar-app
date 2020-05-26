@@ -16,7 +16,7 @@
         a.orange Показать все
 
       .batch_block_cards
-        - @current_batches.each do |batch|
+        - @current_batches.limit(6).each do |batch|
           = render partial: 'outlets/outlet_card', locals: { outlet: batch.outlet, batch: batch }
 
     hr.separator
@@ -27,7 +27,7 @@
         h2 Будущие акции
         a.orange Показать все
       .batch_block_cards
-        - @future_batches.each do |batch|
+        - @future_batches.limit(6).each do |batch|
           = render partial: 'outlets/outlet_card',locals: { outlet: batch.outlet, batch: batch }
 
     hr.separator

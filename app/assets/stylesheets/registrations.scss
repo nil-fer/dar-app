@@ -1,19 +1,20 @@
-.body_1 {
+.devise_container {
   width: 100%;
   height: 100vw;
+  position: fixed;
   background-image: url("background_bread");
 }
 
 .users_log_in {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 270px;
   background-color: white;
   display: flex;
   flex-direction: column;
   margin: auto;
   margin-top: 130px;
   padding: 70px;
-  border-radius: 60px;
+  border-radius: 30px;
 
   h2 {
     margin-bottom: 30px;
@@ -21,15 +22,7 @@
 
   label {
     font-family: 'CoFo Sans Medium';
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 10px;
   }
-
-  .remember {
-    label {
-    font-size: 18px;
-    }
-  }
-
-  button
 }
