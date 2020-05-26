@@ -34,4 +34,3 @@ def create_batch(activation_start:, activation_end:, company_name:)
     discount: Batch.discounts.keys.sample
   )
 end
-
