@@ -1,4 +1,6 @@
 = javascript_pack_tag 'product_pack'
+= javascript_pack_tag 'banner_pack'
+
 .outlet_container
   .outlet_banner
   .outlet_info
@@ -26,10 +28,8 @@
       .batch_block
         .batch_block_title
           h2[id = "category_#{index}"] = category_name
-        .batch_block_cards
-          - @products.each do |product|
-            = render partial: 'products/product_card', locals: {product: product, discount: @batch.discount.to_i}
+        .react-products-list data-products=products.to_json data-discount=@batch.discount.to_i
 
     hr.separator
 
-  .banner
+  .react-instructions-banner

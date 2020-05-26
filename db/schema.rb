@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(version: 2020_05_18_130532) do
     t.json "address"
     t.integer "company_id"
     t.string "email"
-    t.string "company_category"
   end
 
   create_table "products", force: :cascade do |t|
