@@ -32,7 +32,7 @@
 
   .new_product {
     @include dashed_border;
-    background-color: #F6F6F6;
+    background-color: #f6f6f6;
     width: 552px;
     height: 312px;
     margin: 48px auto 0;
@@ -54,8 +54,7 @@
     margin-right: 24px;
     color: $dark_grey;
     input {
-    font-family: 'CoFo Sans Medium';
-
+      font-family: 'CoFo Sans Medium';
     }
   }
 
@@ -84,7 +83,6 @@
       width: 150px;
       height: 40px;
     }
-
   }
 
   .measure_input {
@@ -111,9 +109,7 @@
     justify-content: space-between;
     margin-top: 32px;
   }
-    }
-
-
+}
 
 .file_field {
   position: absolute;
@@ -156,7 +152,7 @@
     .cover {
       flex: 1 0 auto;
       // background-color: $orange;
-      @include card_img(130px, 184px)
+      @include card_img(130px, 184px);
     }
 
     .batch_product_card_info {
@@ -184,7 +180,7 @@
         }
 
         .disabled_price {
-        display: none;
+          display: none;
         }
 
         p {
@@ -226,9 +222,8 @@
   .cover {
     width: inherit;
     flex: 1 0 auto;
-    @include card_img(169px, 200px)
+    @include card_img(169px, 200px);
   }
-
 
   .product_card_info {
     flex: 0 1 auto;
@@ -250,9 +245,8 @@
       }
 
       .disabled_price {
-      display: none;
+        display: none;
       }
-
 
       p {
         margin-top: 6px;

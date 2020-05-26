@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
 
-import Products from '../components/products';
+import ProductsList from '../components/products_list';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const productsInfo = JSON.parse(document.getElementsByClassName('batch_block_cards')[0].dataset.props)
+  const productBlocks = document.getElementsByClassName('react-products-list');
 
-  ReactDOM.render(
-    <Products {...productsInfo} />,
-    document
-      .getElementsByClassName('batch_block_cards')[0]
-      .appendChild(document.createElement('section')),
-  );
+  [...productBlocks].forEach((block) => {
+    const products = JSON.parse(block.dataset.products);
+    const discount = JSON.parse(block.dataset.discount);
+
+    ReactDOM.render(<ProductsList products={products} discount={discount} />, block);
+  });
 });

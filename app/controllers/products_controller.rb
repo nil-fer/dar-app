@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ProductsController < ApplicationController
-  before_action :get_outlet
+  before_action :get_outlet, except: :book
   before_action :set_product, only: %i[edit update destroy]
 
   def index
@@ -48,6 +48,15 @@ class ProductsController < ApplicationController
       format.html { redirect_to outlet_products_path(@outlet), notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def book
+    @product = Product.find(params[:id])
+    ProductMailer.with(
+      product: @product, email: params[:email], code: params[:code]
+    ).book_code.deliver_later
+
+    head :no_content
   end
 
   private

@@ -1,6 +1,8 @@
 {
   "application.js": "/packs/js/application-7bda1cffee950b9cf8c0.js",
   "application.js.map": "/packs/js/application-7bda1cffee950b9cf8c0.js.map",
+  "banner_pack.js": "/packs/js/banner_pack-24253090d65c7b7aa561.js",
+  "banner_pack.js.map": "/packs/js/banner_pack-24253090d65c7b7aa561.js.map",
   "entrypoints": {
     "application": {
       "js": [
@@ -10,20 +12,20 @@
         "/packs/js/application-7bda1cffee950b9cf8c0.js.map"
       ]
     },
-    "product_pack": {
+    "banner_pack": {
       "js": [
-        "/packs/js/product_pack-e52a4ac4538a1af4077a.js"
+        "/packs/js/banner_pack-24253090d65c7b7aa561.js"
       ],
       "js.map": [
-        "/packs/js/product_pack-e52a4ac4538a1af4077a.js.map"
+        "/packs/js/banner_pack-24253090d65c7b7aa561.js.map"
       ]
     },
-    "quantity": {
+    "product_pack": {
       "js": [
-        "/packs/js/quantity-38e06ea6097997dbbe63.js"
+        "/packs/js/product_pack-62f4b2564f3e93300f0d.js"
       ],
       "js.map": [
-        "/packs/js/quantity-38e06ea6097997dbbe63.js.map"
+        "/packs/js/product_pack-62f4b2564f3e93300f0d.js.map"
       ]
     },
     "server_rendering": {
@@ -35,10 +37,8 @@
       ]
     }
   },
-  "product_pack.js": "/packs/js/product_pack-e52a4ac4538a1af4077a.js",
-  "product_pack.js.map": "/packs/js/product_pack-e52a4ac4538a1af4077a.js.map",
-  "quantity.js": "/packs/js/quantity-38e06ea6097997dbbe63.js",
-  "quantity.js.map": "/packs/js/quantity-38e06ea6097997dbbe63.js.map",
+  "product_pack.js": "/packs/js/product_pack-62f4b2564f3e93300f0d.js",
+  "product_pack.js.map": "/packs/js/product_pack-62f4b2564f3e93300f0d.js.map",
   "server_rendering.js": "/packs/js/server_rendering-0eb09cdf7f1c42854581.js",
   "server_rendering.js.map": "/packs/js/server_rendering-0eb09cdf7f1c42854581.js.map"
 }

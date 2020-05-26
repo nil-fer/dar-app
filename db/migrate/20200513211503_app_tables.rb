@@ -42,7 +42,6 @@ class AppTables < ActiveRecord::Migration[6.0]
       t.json :address
       t.integer :company_id
       t.string :email
-      t.string :company_category
     end
   end
 end

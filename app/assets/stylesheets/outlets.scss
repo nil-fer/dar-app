@@ -6,7 +6,7 @@
   flex-direction: column;
 
   .outlet_banner {
-    background-image: url("background_bread.png");
+    background-image: url('background_bread.png');
     left: 0;
     height: inherit;
     width: 100vw;
@@ -33,7 +33,9 @@
 
 .banner {
   @include banner;
-  background-image: url("instruction_banner.png");
+  margin: 24px -40px;
+  cursor: pointer;
+  background-image: url('instruction_banner.png');
 }
 
 .outlet_card {
@@ -54,7 +56,7 @@
     // min-height: 146px;
     // max-height: 174px;
     // flex: 1 0 auto;
-    @include card_img(146px, 174px)
+    @include card_img(146px, 174px);
   }
 
   .outlet_card_info {
@@ -87,7 +89,8 @@
         margin: 0 8px;
       }
 
-      p.orange {}
+      p.orange {
+      }
     }
   }
 }

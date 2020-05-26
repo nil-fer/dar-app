@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-
-  # protect_from_forgery with: :exception
+  protect_from_forgery with: :exception
 
   layout :layout_by_resource
 
@@ -10,6 +9,7 @@ class ApplicationController < ActionController::Base
 
   protected
 
+<<<<<<< HEAD
   def layout_by_resource
     if devise_controller?
       "devise"
@@ -18,14 +18,11 @@ class ApplicationController < ActionController::Base
     end
   end
   
+=======
+>>>>>>> fix_js_again
   def configure_permitted_parameters
-      added_attrs = [:email, :password, :password_confirmation, :remember_me]
-      devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
-      devise_parameter_sanitizer.permit :account_update, keys: added_attrs
-      # devise_parameter_sanitizer.permit :accept_invitation, keys: [:email]
-      devise_parameter_sanitizer.permit :invite, keys: [:role]
+    devise_parameter_sanitizer.permit :invite, keys: [:role, :company_id, :outlet_id]
   end
-
 
   def after_sign_in_path_for(resource)
     if resource.role == 'admin'

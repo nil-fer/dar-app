@@ -1,11 +1,13 @@
-.banner
+= javascript_pack_tag 'banner_pack'
+
+.react-instructions-banner
 
 .menubar
   hr.separator
   .items
     h4.menu_item Все
-    - Company.company_categories.each do |key, value|
-      h4.menu_item #{key}
+    - Company.company_categories.each do |key, i|
+      h4.menu_item onclick="checkClick(this, '#{i}')" #{key}
   hr.separator
 
 .batch
@@ -54,4 +56,3 @@
          - category_batches.each do |batch|
            = render partial: 'outlets/outlet_card',locals: { outlet: batch.outlet, batch: batch }
 
-    //.button_all.button показать еще
