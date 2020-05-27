@@ -1,6 +1,21 @@
-  .outlet_line
-    p = outlet.id
-    p = display_full_address(outlet.address)
-    p = outlet.email
-    = link_to 'Редактировать', edit_outlet_path(outlet, company_id: outlet.company_id)
-    = link_to 'Удалить', outlet, method: :delete, data: { confirm: 'Are you sure?' }
+.table
+  .table-section
+    p.table-header Номер
+    .content-container
+      p = outlet.id
+
+  .table-section
+    p.table-header Почта
+    .content-container
+      p = display_full_address(outlet.address)
+
+  .table-section
+    p.table-header Почта менеджера
+    .content-container
+      p = outlet.email
+
+  .table-section
+    p.table-header Действия
+    .content-container
+      p = link_to 'Редактировать', edit_outlet_path(outlet, company_id: outlet.company_id)
+      p = link_to 'Удалить', outlet, method: :delete, data: { confirm: 'Удалить аутлет?' }

@@ -1,6 +1,6 @@
-.outlet_title {
-
-}
+// .outlet_title {
+//
+// }
 
 .outlet_list {
  width: 840px;
@@ -11,8 +11,49 @@
 
 .outlet_line {
   display: grid;
-  grid-template-columns: repeat(8, 1fr); 
+  grid-template-columns: repeat(8, 1fr);
   // flex-direction: row;
   justify-content: space-between;
   width: 840px;
+}
+
+
+.table-wrapper {
+  padding: 32px 0;
+
+  .table-name {
+    margin-bottom: 24px;
+  }
+
+  .button_book {
+    margin: 32px 0;
+  }
+}
+
+.table {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.table-section {
+  display: flex;
+  flex-direction: column;
+  margin-right: 32px;
+
+  .table-header {
+    margin-bottom: 16px;
+  }
+
+  .content-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+
+    p {
+      display: flex;
+      align-items: center;
+      margin-right: 16px;
+      height: 24px;
+    }
+  }
 }

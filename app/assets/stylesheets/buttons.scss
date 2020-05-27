@@ -1,6 +1,6 @@
 @import 'mixins';
 
-.button {
+.button, input[type="submit"] {
   height: 40px;
   @include border_radius;
   background-color: $orange;
@@ -30,6 +30,20 @@
 a.button_edit {
   border: 1px solid $orange;
   color: $orange;
+}
+
+.button_invite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 40px;
+
+  border: 2px solid #333333;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  margin: 32px 0;
 }
 
 .button_delete {

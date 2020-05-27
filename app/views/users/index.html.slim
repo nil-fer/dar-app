@@ -1,5 +1,16 @@
-- @users.each do |user|
-  div
-    = user.email
-    br
-    = user.role
+.table-wrapper
+  h3 Все пользователи
+  .button_invite
+    p = link_to "Отправить приглашение", new_user_invitation_path
+  .table
+    .table-section
+      p.table-header Email
+      - @users.each do |user|
+        .content-container
+          p = user.email
+
+    .table-section
+      p.table-header Роль
+      - @users.each do |user|
+        .content-container
+          p = user.role
