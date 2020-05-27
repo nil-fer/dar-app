@@ -3,33 +3,22 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
-  layout :layout_by_resource
+  # layout :layout_by_resource
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   protected
 
-<<<<<<< HEAD
-  def layout_by_resource
-    if devise_controller?
-      "devise"
-    else
-      "application"
-    end
-  end
-  
-=======
->>>>>>> fix_js_again
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit :invite, keys: [:role, :company_id, :outlet_id]
   end
 
   def after_sign_in_path_for(resource)
-    if resource.role == 'admin'
+    if resource.role == 'Администратор'
       root_path
-    elsif resource.role == 'retailer'
+    elsif resource.role == 'Ритейлер'
       company_path(resource.company)
-    elsif resource.role == 'manager'
+    elsif resource.role == 'Менеджер'
       outlet_products_path(resource.outlet)
     else
       root_path

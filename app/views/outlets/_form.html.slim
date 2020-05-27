@@ -11,22 +11,23 @@
           li
             = message
   .field
-    = form.label :email
+    = form.label :Почта_менеджера
+    br
     = form.text_field :email
 
-  = form.fields_for :address, OpenStruct.new(form.object.address) do |address_form|
+  = form.fields_for :Адрес, OpenStruct.new(form.object.address) do |address_form|
     .field
-      = address_form.label :city
+      = address_form.label :Город
+      br
       = address_form.text_field :city
     .field
-      = address_form.label :street
+      = address_form.label :Улица
+      br
       = address_form.text_field :street
     .field
-      = address_form.label :apartment
+      = address_form.label :Строение
+      br
       = address_form.text_field :apartment
-    .field
-      = address_form.label :block
-      = address_form.text_field :block
 
-  .actions
-    = form.submit
+  .button.actions
+    = form.submit "Создать аутлет"

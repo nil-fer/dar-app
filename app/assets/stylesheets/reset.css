@@ -247,6 +247,8 @@ input[type="submit"] {
   /* 3 */
   *overflow: visible;
   /* 4 */
+  *color: black;
+  /* 4 */
 }
 
 /**
@@ -298,7 +300,7 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-input[type=password], input[type=email] {
+input[type=password], input[type=email], input[type=text] {
   margin-top: 8px;
   margin-bottom: 16px;
   width: 350px;

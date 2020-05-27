@@ -15,7 +15,7 @@
     .batch_block
       .batch_block_title
         h2 Активные акции
-        a.orange Показать все
+      //  a.orange Показать все
 
       .batch_block_cards
         - @current_batches.limit(6).each do |batch|
@@ -27,7 +27,7 @@
     .batch_block
       .batch_block_title
         h2 Будущие акции
-        a.orange Показать все
+      //  a.orange Показать все
       .batch_block_cards
         - @future_batches.limit(6).each do |batch|
           = render partial: 'outlets/outlet_card',locals: { outlet: batch.outlet, batch: batch }
@@ -50,9 +50,8 @@
       hr.separator
       .batch_block
         .batch_block_title
-          h2 = category_name
+          h2[id = "category_#{index}"] = category_name
 
-        .batch_block_cards[id = "category_#{index}"]
+        .batch_block_cards
          - category_batches.each do |batch|
            = render partial: 'outlets/outlet_card',locals: { outlet: batch.outlet, batch: batch }
-
