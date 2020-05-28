@@ -22,15 +22,17 @@ const BookingPopup = ({ handleClose, bookingShow, productId }) => {
   return (
     <div className={showHideClassName}>
       <div className="modal booking-modal">
-        <div>
+        <div className="booking-content">
           <h3>Ваш код - {code}</h3>
           <h3>Мы отправим его на вашу почту</h3>
           <br />
           <form action={'/products/' + productId + '/book'} data-remote="true" method="post">
             <input type="hidden" name="authenticity_token" value={getCSRFToken()} />
             <input type="hidden" name="code" value={code} />
-            <input placeholder="email@example.com" required="required" type="email" name="email" />
-            <input type="submit" name="commit" value="Отправить" onClick={submitForm} />
+              <div className="submit-field">
+                <input placeholder="email@example.com" required="required" type="email" name="email" />
+                <div className="button_submit button" onClick={submitForm}>Отправить</div>
+              </div>
           </form>
         </div>
         <div className="close-btn" onClick={handleClose}>

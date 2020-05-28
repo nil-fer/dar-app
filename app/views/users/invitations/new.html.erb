@@ -1,34 +1,37 @@
-<div class="devise_form">
+<div class="devise_form-invitations">
 
-<h2><%= t "devise.invitations.new.header" %></h2>
+  <h2><%= t "devise.invitations.new.header" %></h2>
 
-<%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :Почта %><br />
-    <%= f.text_field :email %>
-  </div>
+    <div class="email-field">
+      <%= f.label :Почта %><br />
+      <%= f.text_field :email %>
+    </div>
 
-  <div class="field">
-    <%= f.label :role %><br />
-    <%= f.select :role, %w[Администратор Ритейлер Менеджер] %>
-  </div>
+    <div class="selectors">
+      <div class="select-role">
+        <%= f.label :Роль %><br />
+        <%= f.select :role, %w[Администратор Ритейлер Менеджер] %>
+      </div>
 
-  <div class="field">
-    <%= f.label :Компания %><br />
-    <%= f.select :company_id, Company.all.pluck(:company_name, :id), include_blank: true %>
-  </div>
+      <div class="select-company">
+        <%= f.label :Компания %><br />
+        <%= f.select :company_id, Company.all.pluck(:company_name, :id), include_blank: true %>
+      </div>
 
-  <div class="field">
-    <%= f.label :Аутлет %><br />
-    <%= f.select :outlet_id,
-      Outlet.all.map {|ou| [ou.company.company_name + ', ' + display_title_address(ou.address), ou.id]},
-      include_blank: true
-    %>
-  </div>
+      <div class="select-outlet">
+        <%= f.label :Аутлет %><br />
+        <%= f.select :outlet_id,
+          Outlet.all.map {|ou| [ou.company.company_name + ', ' + display_title_address(ou.address), ou.id]},
+          include_blank: true
+        %>
+      </div>
+    </div>
 
-  <div class="actions button">
-    <%= f.submit t("devise.invitations.new.submit_button") %>
-  </div>
-<% end %>
+    <div class="button">
+      <%= f.submit t("devise.invitations.new.submit_button"), class: 'button_book button' %>
+    </div>
+  <% end %>
+</div>

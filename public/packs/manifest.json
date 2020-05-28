@@ -22,10 +22,10 @@
     },
     "product_pack": {
       "js": [
-        "/packs/js/product_pack-62f4b2564f3e93300f0d.js"
+        "/packs/js/product_pack-633c6878eb111184d3a1.js"
       ],
       "js.map": [
-        "/packs/js/product_pack-62f4b2564f3e93300f0d.js.map"
+        "/packs/js/product_pack-633c6878eb111184d3a1.js.map"
       ]
     },
     "server_rendering": {
@@ -37,8 +37,8 @@
       ]
     }
   },
-  "product_pack.js": "/packs/js/product_pack-62f4b2564f3e93300f0d.js",
-  "product_pack.js.map": "/packs/js/product_pack-62f4b2564f3e93300f0d.js.map",
+  "product_pack.js": "/packs/js/product_pack-633c6878eb111184d3a1.js",
+  "product_pack.js.map": "/packs/js/product_pack-633c6878eb111184d3a1.js.map",
   "server_rendering.js": "/packs/js/server_rendering-0eb09cdf7f1c42854581.js",
   "server_rendering.js.map": "/packs/js/server_rendering-0eb09cdf7f1c42854581.js.map"
 }

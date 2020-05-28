@@ -1,6 +1,6 @@
 @import 'mixins';
 
-.button, input[type="submit"] {
+.button {
   height: 40px;
   @include border_radius;
   background-color: $orange;
@@ -56,6 +56,11 @@ a.button_edit {
   line-height: 40px;
 }
 
+.button_login {
+  width: 366px;
+  line-height: 40px;
+}
+
 .button_category,
 .button_quantity {
   background-color: transparent;
@@ -81,7 +86,7 @@ a.button_edit {
   padding-left: 16px;
   padding-right: 16px;
   width: 92px;
-  height: 48px;
+  height: 40px;
   @include border_radius;
 }
 

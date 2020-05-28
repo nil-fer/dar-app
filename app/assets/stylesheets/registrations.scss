@@ -5,7 +5,7 @@
   background-image: url('background_bread');
 }
 
-.devise_form {
+.devise_form, .devise_form-invitations, .devise_form-new-company .user_wrapper {
   width: 350px;
   height: 270px;
   background-color: white;
@@ -24,6 +24,19 @@
     font-family: 'CoFo Sans Medium';
     font-size: 18px;
     margin-bottom: 10px;
+  }
+}
+
+.devise_form-invitations {
+  width: 650px;
+
+  input[type="text"] {
+    width: 414px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
   }
 }
 

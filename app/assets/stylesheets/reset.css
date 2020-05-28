@@ -73,6 +73,15 @@ input[type=search] {
   box-sizing: content-box;
 }
 
+input[type="submit"] {
+  /* background: none; */
+  border: none;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+
 textarea {
   overflow: auto;
   vertical-align: top;
@@ -247,8 +256,10 @@ input[type="submit"] {
   /* 3 */
   *overflow: visible;
   /* 4 */
-  *color: black;
-  /* 4 */
+  *color: white;
+  /* 5 */
+  *margin: auto;
+  /* padding-left: 70px; */
 }
 
 /**

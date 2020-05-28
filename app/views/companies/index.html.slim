@@ -13,4 +13,4 @@
       - @companies.each do |company|
         .content-container
           p = link_to 'Редактировать', edit_company_path(company)
-          p = link_to 'Удалить', company, method: :delete, data: { confirm: 'Are you sure?' }
+          p = link_to 'Удалить', company, method: :delete, data: { confirm: 'Вы уверены, что хотите удалить компанию?' }

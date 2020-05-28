@@ -32,7 +32,6 @@
 }
 
 .instruction-modal {
-
   top: 20%;
   left: 28%;
   width: 630px;
@@ -44,9 +43,11 @@
 .close-btn {
   float: right;
   color: black;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
   cursor: pointer;
+  width: 50px;
+  padding: 10px;
 }
 
 .close-btn:hover {
@@ -59,4 +60,75 @@
 
 .display-none {
   display: none;
+}
+
+.product-pic {
+  margin-right: 24px;
+}
+
+.popup-product_card_info {
+  width: 100%;
+  padding-top: 24px;
+
+  flex: 0 1 auto;
+  min-height: 180px;
+  background-color: #fff;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .details {
+    margin-right: 16px;
+
+    h3,
+    h4 {
+      margin-top: 12px;
+    }
+
+    .disabled_price {
+      display: none;
+    }
+
+    p {
+      margin-top: 6px;
+    }
+  }
+
+  .popup-card-buttons {
+    display: flex;
+    align-content: center;
+    margin: 16px 0;
+
+    .button_book {
+      margin-right: 24px;
+    }
+  }
+}
+
+.booking-content {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  height: 166px;
+
+  h3 {
+    font-family: 'CoFo Sans Regular';
+  }
+}
+
+.submit-field {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+
+  input[type="email"] {
+    margin: 0;
+    margin-right: 24px;
+  }
+
+  .button {
+    width: 130px;
+    height: 44px;
+  }
 }

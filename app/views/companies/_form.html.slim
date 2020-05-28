@@ -1,20 +1,24 @@
-= form_with(model: company, local: true) do |form|
-  - if company.errors.any?
-    #error_explanation
-      h2
-        = pluralize(company.errors.count, "error")
-        |  prohibited this outlet from being saved:
-      ul
-        - company.errors.full_messages.each do |message|
-          li
-            = message
-  .field
-    = form.label :company_name
-    = form.text_field :company_name
+.devise_form
+  h2 Cоздать компанию
+  = form_with(model: company, local: true) do |form|
+    - if company.errors.any?
+      #error_explanation
+        h2
+          = pluralize(company.errors.count, "error")
+          |  prohibited this outlet from being saved:
+        ul
+          - company.errors.full_messages.each do |message|
+            li
+              = message
+    .company-name-field
+      = form.label :Название
+      br
+      = form.text_field :company_name
 
-  .field
-    = form.label :company_category
-    = form.select :company_category, Company.company_categories.keys
+    .select-company
+      = form.label :Категория
+      br
+      = form.select :company_category, Company.company_categories.keys
 
-  .actions
-    = form.submit
+    .button
+      = form.submit 'Сохранить', class: 'button_book button middle'

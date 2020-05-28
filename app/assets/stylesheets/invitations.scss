@@ -6,3 +6,23 @@
     margin: 32px 0;
   }
 }
+
+.selectors {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+
+.select-role, .select-company, .select-outlet {
+  select {
+    font-family: 'CoFo Sans Medium';
+    background-color: white;
+    border: 1px solid #E5E5E5;
+    width: 200px;
+    height: 40px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+}

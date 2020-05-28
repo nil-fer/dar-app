@@ -22,14 +22,15 @@ $white: #fff;
   }
 }
 
-
 @mixin border_radius {
   border-radius: 6px;
 }
+
 @mixin banner {
   width: 1360px;
   height: 340px;
 }
+
 @mixin fire_icon {
   span {
     margin-right: 12px;

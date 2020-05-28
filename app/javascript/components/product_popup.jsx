@@ -37,20 +37,23 @@ class ProductPopup extends React.Component {
     return (
       <div className={showHideClassName}>
         <div className="modal product-modal">
-          <div>{product.product_pic && <img src={product.product_pic.url} />}</div>
-          <div>
-            <h1>{product.name}</h1>
-            <p>Категория: {product.category}</p>
-            <p>Цена: {product.price} &#8381;</p>
-            <p>Цена со скидкой: {product.discountPrice} &#8381;</p>
-            <p>
-              Цена за порцию / {product.weight_amount} {product.weight_type}
-            </p>
-            <div className="button_book button" onClick={this.showBookingModal}>
-              Забронировать
-            </div>
-            <div className="button" onClick={this.showInstructionModal}>
-              Как забрать товар?
+          <div className="product-pic">{product.product_pic && <img src={product.product_pic.url} />}</div>
+          <div className="popup-product_card_info">
+            <div className="details">
+              <h4>{product.name}</h4>
+              <p>{product.category}</p>
+              <h3 className="discount_price">{product.discountPrice} &#8381;</h3>
+              <p className="dark_grey">
+                Цена за порцию / {product.weight_amount} {product.weight_type}
+              </p>
+              <div className="popup-card-buttons">
+                <div className="button_book button" onClick={this.showBookingModal}>
+                Забронировать
+                </div>
+                <div className="button_edit button" onClick={this.showInstructionModal}>
+                Как забрать товар?
+                </div>
+              </div>
             </div>
             <BookingPopup
               bookingShow={this.state.bookingShow}

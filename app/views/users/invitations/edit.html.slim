@@ -5,11 +5,11 @@ h2
   = f.hidden_field :invitation_token, readonly: true
   - if f.object.class.require_password_on_accepting
     .field
-      = f.label :password
+      = f.label :Пароль
       br
       = f.password_field :password
     .field
-      = f.label :password_confirmation
+      = f.label :Подтвердите пароль
       br
       = f.password_field :password_confirmation
   .actions
