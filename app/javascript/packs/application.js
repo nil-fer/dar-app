@@ -21,8 +21,9 @@ require('jquery');
 // ReactRailsUJS.useContext(componentRequireContext);
 
 
-import React from 'react';
+
 import ReactDOM from 'react-dom';
+import React from 'react';
 import ProductsList from '../components/products_list';
 import InstructionBanner from '../components/instruction_banner';
 
