@@ -37,6 +37,7 @@ gem 'pry'
 
 gem 'ed25519'
 gem 'bcrypt_pbkdf'
+gem 'dotenv-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -109,6 +109,10 @@ GEM
     devise_invitable (2.0.2)
       actionmailer (>= 5.0)
       devise (>= 4.6)
+    dotenv (2.7.5)
+    dotenv-rails (2.7.5)
+      dotenv (= 2.7.5)
+      railties (>= 3.2, < 6.1)
     ed25519 (1.2.4)
     erubi (1.9.0)
     ffaker (2.14.0)
@@ -261,6 +265,7 @@ DEPENDENCIES
   carrierwave (~> 1.0)
   devise
   devise_invitable
+  dotenv-rails
   ed25519
   faker!
   ffaker
