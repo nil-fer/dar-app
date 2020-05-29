@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'slim'
+gem 'html2slim'
 gem 'carrierwave', '~> 1.0'
 gem 'pry'
 

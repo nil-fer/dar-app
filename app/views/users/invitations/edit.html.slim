@@ -1,16 +1,18 @@
-h2
-  = t "devise.invitations.edit.header"
-= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :put }) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  = f.hidden_field :invitation_token, readonly: true
-  - if f.object.class.require_password_on_accepting
-    .field
-      = f.label :Пароль
-      br
-      = f.password_field :password
-    .field
-      = f.label :Подтвердите пароль
-      br
-      = f.password_field :password_confirmation
-  .actions
-    = f.submit t("devise.invitations.edit.submit_button")
+.body_1
+  .devise_form
+    h2
+      = t "devise.invitations.edit.header"
+    = form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :put }) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      = f.hidden_field :invitation_token, readonly: true
+      - if f.object.class.require_password_on_accepting
+        .field
+          = f.label :Пароль
+          br
+          = f.password_field :password
+        .field
+          = f.label :Подтверждение_пароля
+          br
+          = f.password_field :password_confirmation
+      .actions
+        = f.submit t("devise.invitations.edit.submit_button")

@@ -1,31 +1,13 @@
 {
-  "application.js": "/packs/js/application-7bda1cffee950b9cf8c0.js",
-  "application.js.map": "/packs/js/application-7bda1cffee950b9cf8c0.js.map",
-  "banner.js": "/packs/js/banner-28b3631300fa59370063.js",
-  "banner.js.map": "/packs/js/banner-28b3631300fa59370063.js.map",
+  "application.js": "/packs/js/application-e9fc554db75f19c88c9c.js",
+  "application.js.map": "/packs/js/application-e9fc554db75f19c88c9c.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-7bda1cffee950b9cf8c0.js"
+        "/packs/js/application-e9fc554db75f19c88c9c.js"
       ],
       "js.map": [
-        "/packs/js/application-7bda1cffee950b9cf8c0.js.map"
-      ]
-    },
-    "banner": {
-      "js": [
-        "/packs/js/banner-28b3631300fa59370063.js"
-      ],
-      "js.map": [
-        "/packs/js/banner-28b3631300fa59370063.js.map"
-      ]
-    },
-    "product": {
-      "js": [
-        "/packs/js/product-5cc20d15ee6f1638c60b.js"
-      ],
-      "js.map": [
-        "/packs/js/product-5cc20d15ee6f1638c60b.js.map"
+        "/packs/js/application-e9fc554db75f19c88c9c.js.map"
       ]
     },
     "server_rendering": {
@@ -37,8 +19,6 @@
       ]
     }
   },
-  "product.js": "/packs/js/product-5cc20d15ee6f1638c60b.js",
-  "product.js.map": "/packs/js/product-5cc20d15ee6f1638c60b.js.map",
   "server_rendering.js": "/packs/js/server_rendering-0eb09cdf7f1c42854581.js",
   "server_rendering.js.map": "/packs/js/server_rendering-0eb09cdf7f1c42854581.js.map"
 }

@@ -6,7 +6,7 @@
   flex-direction: column;
 
   .outlet_banner {
-    background-image: image-url('background_bread.png');
+    background-image: url('background_bread.png');
     left: 0;
     height: inherit;
     width: 100vw;
@@ -35,8 +35,7 @@
   @include banner;
   margin: 24px -40px;
   cursor: pointer;
-  background-image: image-url('instruction_banner.png');
-  height: 270px;
+  background-image: url('instruction_banner.png');
 }
 
 .outlet_card {
@@ -100,4 +99,12 @@
 
 .outlet-table_container {
   height: 442px;
+}
+
+.field-container {
+  display: flex;
+
+  .field-content {
+    margin-right: 24px;
+  }
 }

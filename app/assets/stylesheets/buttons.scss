@@ -8,6 +8,9 @@
   text-align: center;
   line-height: 40px;
   display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   font-family: 'CoFo Sans Medium';
 }
@@ -51,13 +54,18 @@ a.button_edit {
   color: $dark_grey;
 }
 
-.button_book {
+.button_book, .button_save {
   width: 366px;
   line-height: 40px;
 }
 
 .button_login {
   width: 366px;
+  line-height: 40px;
+}
+
+.button_submit {
+  width: 300px;
   line-height: 40px;
 }
 
@@ -92,4 +100,8 @@ a.button_edit {
 
 .middle {
   width: 264px;
+}
+
+.actions-batch {
+  width: 100%;
 }

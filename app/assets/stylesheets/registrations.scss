@@ -6,7 +6,7 @@
 }
 
 .devise_form, .devise_form-invitations, .devise_form-new-company .user_wrapper {
-  width: 350px;
+  // width: 350px;
   height: 270px;
   background-color: white;
   display: flex;
@@ -15,9 +15,12 @@
   margin-top: 130px;
   padding: 70px;
   border-radius: 30px;
+  width: max-content;
+  height: max-content;
 
   h2 {
     margin-bottom: 30px;
+    width: 400px;
   }
 
   label {

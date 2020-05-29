@@ -20,14 +20,18 @@
       = address_form.label :Город
       br
       = address_form.text_field :city
-    .field
-      = address_form.label :Улица
-      br
-      = address_form.text_field :street
-    .field
-      = address_form.label :Строение
-      br
-      = address_form.text_field :apartment
 
-  .button.actions
-    = form.submit "Создать аутлет"
+    .field-container
+      .field-content
+        = address_form.label :Улица
+        br
+        = address_form.text_field :street
+
+      .field-content
+        = address_form.label :Строение
+        br
+        = address_form.text_field :apartment
+
+  .actions
+    .button-outlet
+      = form.submit "Создать аутлет"

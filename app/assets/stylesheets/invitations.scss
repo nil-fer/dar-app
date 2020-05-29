@@ -26,3 +26,19 @@
     margin-bottom: 16px;
   }
 }
+
+.actions {
+  input[type="submit"] {
+    height: 40px;
+    border-radius: 6px;
+    background-color: #F9901C;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    display: block;
+    cursor: pointer;
+    font-family: 'CoFo Sans Medium';
+    width: 366px;
+    line-height: 40px;
+  }
+}

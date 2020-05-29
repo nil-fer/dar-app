@@ -1,5 +1,5 @@
 .devise_form
-  h2 Cоздать компанию
+  h2 Управление #{@company.company_name}
   = form_with(model: company, local: true) do |form|
     - if company.errors.any?
       #error_explanation
@@ -21,4 +21,4 @@
       = form.select :company_category, Company.company_categories.keys
 
     .button
-      = form.submit 'Сохранить', class: 'button_book button middle'
+      = form.submit 'Сохранить', class: 'button_book button'
