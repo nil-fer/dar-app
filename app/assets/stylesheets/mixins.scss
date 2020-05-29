@@ -27,6 +27,7 @@ $white: #fff;
 }
 
 @mixin banner {
+  background-repeat: round;
   width: 1360px;
   height: 340px;
 }
