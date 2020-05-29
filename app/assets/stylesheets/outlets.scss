@@ -6,7 +6,7 @@
   flex-direction: column;
 
   .outlet_banner {
-    background-image: url('background_bread.png');
+    background-image: image-url('background_bread.png');
     left: 0;
     height: inherit;
     width: 100vw;
@@ -35,7 +35,7 @@
   @include banner;
   margin: 24px -40px;
   cursor: pointer;
-  background-image: url('instruction_banner.png');
+  background-image: image-url('instruction_banner.png');
   height: 270px;
 }
 

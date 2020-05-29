@@ -17,7 +17,7 @@ nav.navbar {
 
 
     .logo {
-      background-image: url("logo.png");
+      background-image: image-url("logo.png");
       background-size: contain;
       margin-left: 60px;
       width: 44px;
@@ -52,7 +52,7 @@ nav.navbar {
       width: 32px;
       height: 32px;
       display: block;
-      background-image: url("user_logo.png");
+      background-image: image-url("user_logo.png");
       background-size: cover;
     }
   }
