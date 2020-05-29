@@ -20,10 +20,29 @@ require('jquery');
 // var ReactRailsUJS = require("react_ujs");
 // ReactRailsUJS.useContext(componentRequireContext);
 
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ProductsList from '../components/products_list';
+import InstructionBanner from '../components/instruction_banner';
+
 $(document).ready(function() {
   window.checkClick = function(e, key) {
     document.getElementById('category_' + key).scrollIntoView(true);
   };
+
+  const banner = document.querySelector('.react-instructions-banner');
+
+  ReactDOM.render(<InstructionBanner />, banner);
+
+  const productBlocks = document.getElementsByClassName('react-products-list');
+
+  [...productBlocks].forEach((block) => {
+    const products = JSON.parse(block.dataset.products);
+    const discount = JSON.parse(block.dataset.discount);
+
+    ReactDOM.render(<ProductsList products={products} discount={discount} />, block);
+  });
+
 
   $('.decrease_quantity').click(function() {
     const element = $(this).siblings('.quantity_value');

@@ -1,8 +1,8 @@
 {
   "application.js": "/packs/js/application-7bda1cffee950b9cf8c0.js",
   "application.js.map": "/packs/js/application-7bda1cffee950b9cf8c0.js.map",
-  "banner_pack.js": "/packs/js/banner_pack-24253090d65c7b7aa561.js",
-  "banner_pack.js.map": "/packs/js/banner_pack-24253090d65c7b7aa561.js.map",
+  "banner.js": "/packs/js/banner-28b3631300fa59370063.js",
+  "banner.js.map": "/packs/js/banner-28b3631300fa59370063.js.map",
   "entrypoints": {
     "application": {
       "js": [
@@ -12,20 +12,20 @@
         "/packs/js/application-7bda1cffee950b9cf8c0.js.map"
       ]
     },
-    "banner_pack": {
+    "banner": {
       "js": [
-        "/packs/js/banner_pack-24253090d65c7b7aa561.js"
+        "/packs/js/banner-28b3631300fa59370063.js"
       ],
       "js.map": [
-        "/packs/js/banner_pack-24253090d65c7b7aa561.js.map"
+        "/packs/js/banner-28b3631300fa59370063.js.map"
       ]
     },
-    "product_pack": {
+    "product": {
       "js": [
-        "/packs/js/product_pack-633c6878eb111184d3a1.js"
+        "/packs/js/product-5cc20d15ee6f1638c60b.js"
       ],
       "js.map": [
-        "/packs/js/product_pack-633c6878eb111184d3a1.js.map"
+        "/packs/js/product-5cc20d15ee6f1638c60b.js.map"
       ]
     },
     "server_rendering": {
@@ -37,8 +37,8 @@
       ]
     }
   },
-  "product_pack.js": "/packs/js/product_pack-633c6878eb111184d3a1.js",
-  "product_pack.js.map": "/packs/js/product_pack-633c6878eb111184d3a1.js.map",
+  "product.js": "/packs/js/product-5cc20d15ee6f1638c60b.js",
+  "product.js.map": "/packs/js/product-5cc20d15ee6f1638c60b.js.map",
   "server_rendering.js": "/packs/js/server_rendering-0eb09cdf7f1c42854581.js",
   "server_rendering.js.map": "/packs/js/server_rendering-0eb09cdf7f1c42854581.js.map"
 }
