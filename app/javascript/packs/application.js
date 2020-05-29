@@ -20,8 +20,9 @@ require('jquery');
 // var ReactRailsUJS = require("react_ujs");
 // ReactRailsUJS.useContext(componentRequireContext);
 
-import ReactDOM from 'react-dom';
+
 import React from 'react';
+import ReactDOM from 'react-dom';
 import ProductsList from '../components/products_list';
 import InstructionBanner from '../components/instruction_banner';
 
@@ -32,7 +33,9 @@ $(document).ready(function() {
 
   const banner = document.querySelector('.react-instructions-banner');
 
-  ReactDOM.render(<InstructionBanner />, banner);
+  if (banner) {
+    ReactDOM.render(<InstructionBanner />, banner);
+  }
 
   const productBlocks = document.getElementsByClassName('react-products-list');
 
